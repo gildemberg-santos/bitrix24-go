@@ -7,8 +7,4 @@ import (
 func main() {
 	teste := lead.Lead{}
 	teste.AddLead()
-	teste.EditLead()
-	teste.DeleteLead()
-	teste.GetLead()
-	teste.ListLead()
 }
