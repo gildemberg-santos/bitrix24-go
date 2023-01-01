@@ -7,9 +7,9 @@ import (
 )
 
 func Send(lead interface{}, method interface{}, methodType string) {
-	if methodType == "POST" {
+	if methodType == MethodTypePost {
 		Post(lead, method)
-	} else if methodType == "GET" {
+	} else if methodType == MethodTypeGet {
 		Get(lead, method)
 	}
 }
