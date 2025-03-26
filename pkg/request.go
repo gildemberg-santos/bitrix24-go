@@ -6,7 +6,7 @@ import (
 	"github.com/google/go-querystring/query"
 )
 
-func Send(lead interface{}, method interface{}, methodType string) {
+func Send(lead any, method any, methodType string) {
 	if methodType == MethodTypePost {
 		Post(lead, method)
 	} else if methodType == MethodTypeGet {
@@ -14,21 +14,21 @@ func Send(lead interface{}, method interface{}, methodType string) {
 	}
 }
 
-func Post(lead interface{}, method interface{}) {
+func Post(lead any, method any) {
 	fmt.Println("POST")
 	fmt.Println(lead)
 	fmt.Println(method)
 	fmt.Println(Query(lead))
 }
 
-func Get(lead interface{}, method interface{}) {
+func Get(lead any, method any) {
 	fmt.Println("GET")
 	fmt.Println(lead)
 	fmt.Println(method)
 	fmt.Println(Query(lead))
 }
 
-func Query(lead interface{}) string {
+func Query(lead any) string {
 	v, err := query.Values(lead)
 	if err != nil {
 		return ""
